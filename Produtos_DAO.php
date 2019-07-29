@@ -8,7 +8,7 @@ class ProdutosDAO extends ConexaoDB{
         $this->produto = $produto;
     }
 
-    public function show()
+    public function productToString() 
     {
         echo $this->produto->toString();
     }
@@ -20,5 +20,18 @@ class ProdutosDAO extends ConexaoDB{
         VALUES ({$this->produto->getNumero()}, '{$this->produto->getNome()}', '{$this->produto->getCategoria()}', {$this->produto->getQuantidade()}, '{$this->produto->getFornecedor()}')";
 
         return $inserir = mysqli_query($this->getConnetion(),$sql);
+    }
+
+    public function read()
+    {
+        //Implement
+    }
+    public function update()
+    {
+        //Implement
+    }
+    public function delete()
+    {
+        //Implement
     }
 }
